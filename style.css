@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 55px;
+    background-color: aqua;
+    z-index: 100;
+}
+.logo-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+}
+.menu-item {
+    display: inline-block;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+.menu-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+.menu-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background-color: blue;
+    transition: all 0.5s;
+}
+
+.menu-link:hover::before {
+    width: 100%;
+}
